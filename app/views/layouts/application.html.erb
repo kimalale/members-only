@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MembersOnly</title>
+    <title>Members Only</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+      <%# Heading %>
+      <div class="app-name">
+        <h1>MEMBERS ONLY</h1>
+    </div>
     <%= yield %>
+
+      <%# Oprions %>
+    <div class="action-container">
+    <%# Home %>
+      <%= link_to posts_path class: "home" do %>
+          <%= image_tag('home.svg', alt: 'Home', size: '40x40')  %>
+          <p>Home</p>
+      <% end %>
+      
+
+      <%# New Post %>
+      <%= link_to post_new_path class: "new" do %>
+          <%= image_tag('plus-box.svg', alt: 'New Post', size: '40x40')  %>
+          <p>New</p>
+      <% end %>
+
+      <%# Profile %>
+      <%= link_to profile_path class: "profile" do %>
+          <%= image_tag('account.svg', alt: 'Profile', size: '40x40')  %>
+          <p>Profile</p>
+      <% end %>
+    </div>
   </body>
 </html>

@@ -1,0 +1,43 @@
+<%= form_with model: userr do | f | %>
+    <div class="form-details">
+        <!-- Names section -->
+        <div class="col">
+            <%= f.label :first_name, "FIRST NAME:" %>
+            <%= f.text_field :first_name, placeholder: "John" %>
+                    <!-- <small name="error_first_name" class="error" value=""></small> -->
+        </div>
+
+        <div class="col">
+            <%= f.label :last_name, "LAST NAME:" %>
+            <%= f.text_field :last_name, placeholder: "Doe" %>
+            <!-- <small name="error_last_name" class="error" value=""></small> -->
+        </div>
+
+                    <!-- username section -->
+        <div class="col">
+            <%= f.label :username, "USERNAME:" %>
+            <%= f.text_field :username, placeholder: "johndoe" %>
+            <!-- small id="error_email" class="error" value=""></small> -->
+        </div>
+
+
+                    <!-- Email and phone number section -->
+        <div class="col">
+            <%= f.label :email, "EMAIL:" %>
+            <%= f.email_field :email, placeholder: "johndoe@email.com" %>
+            <!-- small id="error_email" class="error" value=""></small> -->
+        </div>
+
+                <!-- Pass word section -->
+        <div class="col">
+            <%= f.label :password, "PASSWORD:" %>
+            <%= f.password_field :password, placeholder: "Password" %>
+            <!--  <small id="error_pwd" class="error" value=""></small> -->
+        </div>
+    </div>
+
+    <div class="btn-center">
+        <%= f.submit class: "btn" %>
+    </div>
+    
+<% end %>

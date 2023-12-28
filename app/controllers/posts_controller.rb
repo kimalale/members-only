@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :require_user, only: [:new]
-  before_action :require_author, only: [:edit, :update, :destroy]
+  before_action :require_user, only: [:new, :edit, :update, :destroy]
 
   def new
     @post = Post.new
@@ -15,7 +14,6 @@ class PostsController < ApplicationController
       redirect_to @post
     else
       render :new, status: :unprocessable_entity
-    else
     end
   end
 

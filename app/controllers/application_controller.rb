@@ -9,14 +9,7 @@ class ApplicationController < ActionController::Base
     helper_method :current_user
 
     def require_user
-        redirect_to '/login' unless current_user
+        redirect_to login_path unless current_user
     end
 
-    def require_author
-        redirect_to '/login' unless current_user.author?
-    end
-
-    def require_commenter
-        redirect_to '/login' unless current_user.commenter?
-    end
 end

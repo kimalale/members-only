@@ -1,2 +1,9 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="container">
+    <h3>Sign Up</h3>
+
+    <%= render "form", user: @user %>
+        <div class="cto-option">
+            <p id="sign-in">Already have an account? <%= link_to "Log in", login_path %></p>
+            <p></p>
+        </div>
+</div>

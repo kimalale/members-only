@@ -1,0 +1,25 @@
+
+<%= form_with model: post do | f | %>
+    <div class="form-details">
+        <!-- Email and phone number section -->
+        <div class="col">
+            <%= f.label :title, "TITLE:" %>
+            <%= f.text_field :title %>
+        <!-- <small id="error_email" class="error" value=""></small> -->
+        </div>  
+
+        <!-- Pass word section -->
+            <div class="col">
+            <%= f.label :body, "BODY:" %>
+            <%= f.text_area(:body, size: '30x15') %>
+        <!-- <small id="error_pwd" class="error" value=""></small> -->
+        </div>
+
+    </div>
+    <div class="btn-center">
+        <%= f.submit, class: "btn" %>
+    </div>
+<% end %>
+
+
+

@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+}
+
+.container {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+
+form, h3, h2 {
+    margin: 40px;
+}
+
+form {
+    margin-bottom: -30px;
+}
+
+.cto-option {
+    margin: 30px 40px 40px 40px;
+}
+
+
+
+.form-details {
+    margin-top: 10px;
+}
+
+label {
+    margin-bottom: 4px;
+}
+.col {
+    margin-top: 20px;
+}
+
+
+
+.container h3 {
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+.sign-in-row {
+    width: 100%;
+    text-align: center;
+}
+
+.error
+{
+    font-size: 12px;
+    color: red;
+}
+
+small {
+    display: block;
+}
+
+.col label {
+    display: block;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+.btn {
+    margin: 30px 0 20px 0;
+    height: 50px;
+    font-weight: 700;
+    width: 170px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: ease-in-out all .5s;
+}
+
+.btn:hover {
+    transition: ease-in-out all .5s;
+    background-color: #c6c8cc;
+}
+
+.btn-center {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.login {
+    margin-top: 80px;
+}
+
+p > a:link
+{
+    color: #b1b9aa;
+    font-weight:600;
+}
+
+
+
+#sign-in > a {
+    text-decoration: none;
+}
+
+input {
+    height: 34px;
+    width: 100%;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    padding-left: 6px;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    padding-left: 6px;
+}
+
+input:active, input:focus, textarea:active, textarea:focus
+{
+    outline-color: #4d7edf;
+    outline-style:ridge;
+    outline-offset: -1px;
+    outline-width: thin;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.post-container > a:link, .post-container > a:visited {
+    text-decoration: none;
+    color: #0b0b0b;
+}
+
+
+/* Index */
+
+.app-name h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.app-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 20px;
+    height: 62px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    -webkit-box-shadow: 6px 2px 4px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 6px 2px 4px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.post-container {
+    background: #0c0c0c;
+    width: 100%;
+    margin: 0;
+    padding: 10px
+}
+
+.body-v2 {
+    background-color: #0b0b0b;
+}
+.post-view {
+    width: 100%;
+    margin: 0;
+    padding: 10px
+}
+
+.post {
+    background-color: #E5E7EB;
+    border-radius: 8px;
+    max-height: 192px;
+    padding: 14px;
+}
+
+.user-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.username p{
+    margin: 0;
+    font-size: 22px;
+}
+
+.post-time {
+    margin-left: auto;
+}
+.post-time p{
+    margin: 0;
+    font-size: 16px;
+    text-align: right;
+}
+
+
+.title h3 {
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.body p {
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.body-view p {
+    margin-bottom: 0;
+}
+
+.action-container {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    background-color: white;
+    height: 1fr;
+    justify-content: space-evenly;
+    padding: 10px;
+    -webkit-box-shadow: 6px 2px 4px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 6px 2px 4px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 6px 2px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+.action-container P {
+    margin: 0;
+}
+
+.action-container a {
+    text-decoration: none;
+}
+
+.action-container a:visited, .action-container a:link {
+    color: black;
+}
+
+
+.home, .new, .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Profile */
+
+.profile-view {
+    height: 320px;
+}
+
+.profile-view h1 {
+    text-align: center;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.usern {
+    text-align: center;
+}
+
+.usern h2 {
+    margin: 10px;
+}
+
+.btn-center a, .btn-center button{
+    margin: 0;
+}
+
+
+.log p {
+    margin-left: 10px;
+}
+
+
+@media only screen and (min-width: 480px) {
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .container {
+        width: 70%;
+        margin: auto;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .container {
+        width: 60%;
+        margin: auto;
+    }
+  }
+
+  .edit {
+    margin-top: 40px;
+  }
+
+  .ye {
+    object-fit: cover;
+    border-radius: 8px;
+  }

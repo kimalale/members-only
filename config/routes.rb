@@ -3,13 +3,14 @@ Rails.application.routes.draw do
 
   get 'post/new', to: 'posts#new'
   post 'post/new', to: 'posts#create'
-  get '/post', to: 'post#show'
   get 'posts', to: 'posts#index'
+  get 'post/edit', to: 'posts#edit'
+  post 'post/edit', to: 'posts#update'
   get '/login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
-  delete 'logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
 
-  root 'users#show'
+  root 'posts#index'
   get '/signup', to: 'users#new'
   post 'signup', to: 'users#create'
   get 'profile', to: 'users#show'

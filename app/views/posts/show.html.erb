@@ -1,2 +1,33 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="post-view">
+    <div class="post">
+        <div class="user-info">
+            <div class="avatar">
+                <%= image_tag("ye#{rand(1..4)}.jpeg", class: "ye", alt: 'ye', size: '50x50')  %>
+            </div>
+            <div class="username">
+                <p>@<%= @post.user.username %></p>
+            </div>
+            <div class="post-time">
+                <p>12 Aug, 13:30</p>
+            </div>
+        </div>
+        <div class="post-info">
+            <div class="title">
+                <h3><%= @post.title%></h3>
+            </div>
+            <div class="body">
+                <p><%= @post.body %></p>
+            </div>
+        </div>
+    </div>
+    <div class="btn-center edit">
+        <% if current_user && current_user.id == @post.user.id %>
+            <%= link_to edit_post_path(@post) do %>
+            <%= button_tag "Edit Post", class: "btn" %> 
+            <% end %>
+            <%= link_to post_path(@post), data: {turbo_method: :delete} do %>
+            <%= button_tag "Delete Post", class: "btn" %> 
+            <% end %>
+        <% end %> 
+    </div>
+</div>

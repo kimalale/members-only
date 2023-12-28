@@ -1,2 +1,30 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<div class="post-container">
+    <% @posts.each do | post | %>
+        <%= link_to post_path(post) do %>
+            <div class="post">
+                <div class="user-info">
+                    <div class="avatar">
+                        <%= image_tag("ye#{rand(1..4)}.jpeg", class: "ye", alt: 'ye', size: '50x50')  %>
+                    </div>
+                    <div class="username">
+                        <p>@<%= post.user.username %></p>
+                    </div>
+                    <div class="post-time">
+                        <p><%= post.created_at.strftime("%d/%m/%y %H:%M")%></p>
+                    </div>
+                </div>
+                <div class="post-info">
+                    <div class="title">
+                        <h3><%= post.title %> </h3>
+                    </div>
+                    <div class="body-view">
+                        <p><%= post.body %></p>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+</div>
+
+<%# The Importance of Africanacity %>
+<%# The black man is the only species in the entire population that forget his own brothers and sisters. %>

@@ -20,15 +20,15 @@ class UsersController < ApplicationController
     end
 
     def show
-        @user = User.find(params[:id])
+        @user = User.find(session[:user_id]) if session[:user_id]
     end
 
     def edit
-        @user = find(session[:user_id])
+        @user = User.find(session[:user_id])
     end
 
     def update
-        @user = find(session[:user_id])
+        @user = User.find(session[:user_id])
         if @user.update(user_params)
             redirect_to @user
         else

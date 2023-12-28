@@ -3,8 +3,10 @@ class User < ApplicationRecord
     has_many :posts
     has_many :comments
 
-    validates :first_name, before_save {self.first_name = first_name.downcase}, presence :true
-    validates :last_name, before_save {self.last_name = last_name.downcase}, presence :true
-    validates :email, before_save {self.email = email.downcase}, presence: true, uniqueness: true
+    validates :first_name, presence: true
+    validates :last_name, presence: true
+    validates :username, presence: true, uniqueness: true
+    validates :email, presence: true, uniqueness: true
     validates :password, presence: true, length: {minimum:8, maximum:16}
+
 end
