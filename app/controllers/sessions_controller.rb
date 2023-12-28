@@ -8,6 +8,8 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
       redirect_to root_path, :notice => "Welcome back, #{@user.first_name}"
+    else
+      redirect_to login_path, status: :unprocessable_entity
     end
   end
 
